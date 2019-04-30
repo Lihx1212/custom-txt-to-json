@@ -1,4 +1,4 @@
-from format import formatTxtToList
+from utils.format import formatTxtToList
 
 def createDictionary(workouts_file):
 

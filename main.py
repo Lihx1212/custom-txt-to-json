@@ -1,5 +1,5 @@
 import json
-from dictionary import createDictionary
+from utils.dictionary import createDictionary
 
 #January workouts
 with open('files/text/January.txt') as jan_workouts_file:
