@@ -1,6 +1,14 @@
 import json
 from dictionary import createDictionary
 
+#January workouts
+with open('files/January.txt') as jan_workouts_file:
+    
+    d = createDictionary(jan_workouts_file)
+
+    with open("files/january.json","w") as f:
+        json.dump(d,f)
+
 #February workouts
 with open('files/February.txt') as feb_workouts_file:
     
