@@ -10,5 +10,5 @@ def formatTxtToList(lines):
             miles_ran = miles_unformat[0] + '.' + miles_unformat[1:]
             calories_burned =  lines[index + 2].rstrip().replace("c","")
             total_strides =  lines[index + 3].rstrip().replace("s","")
-            newLines+=f'{month} {day} {time_of_day} {miles_ran} {calories_burned} {total_strides} \n'
+            newLines+=f'2019 {month} {day} {time_of_day} {miles_ran} {calories_burned} {total_strides} \n'
     return newLines
