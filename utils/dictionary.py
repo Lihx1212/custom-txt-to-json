@@ -8,7 +8,7 @@ def createDictionary(workouts_file):
 	key = "workouts"
 	for line in newLines.splitlines():
 		newLine = line.rstrip().split(' ')
-		listOfKeys = ['year', 'month', 'day', 'timeOfDay' , 'distance' , 'calories' , 'strides']
+		listOfKeys = ['year', 'month', 'day', 'timeOfDay' , 'distance' , 'calories' , 'strides', 'spm', 'time']
 		zipbObj = zip(listOfKeys, newLine)
 		nested_dictionary.setdefault(key, []).append(dict(zipbObj))
 	return nested_dictionary
