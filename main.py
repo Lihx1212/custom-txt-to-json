@@ -40,3 +40,11 @@ with open('files/text/May.txt') as may_workouts_file:
 
     with open("files/json/may.json","w") as f:
         json.dump(d,f)
+
+#June workouts
+with open('files/text/June.txt') as june_workouts_file:
+    
+    d = createDictionary(june_workouts_file)
+
+    with open("files/json/june.json","w") as f:
+        json.dump(d,f)
