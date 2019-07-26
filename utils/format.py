@@ -1,11 +1,17 @@
 #return new formatted lines
+import re
 def formatTxtToList(lines):
     month = lines.pop(0).rstrip()
     newLines = ''
     for index, line in enumerate(lines):
         if ":" in line:
             day =  lines[index - 1].rstrip()
-            time_of_day = line.rstrip()
+            time = line.rstrip()
+            short_time = time[:2]
+            if any(re.findall(r'7|8|9|10|11|12', short_time, re.IGNORECASE)):
+                time_of_day = time
+            else:
+                time_of_day = str(int(time[:1]) + 12) + time[1:4]       
             miles_unformat =  lines[index + 1].rstrip()
             miles_ran = miles_unformat[0] + '.' + miles_unformat[1:]
             calories_burned =  lines[index + 2].rstrip().replace("c","")

@@ -1,6 +1,5 @@
 import json
 from utils.dictionary import createDictionary
-
 #January workouts
 with open('files/text/January.txt') as jan_workouts_file:
     
@@ -47,7 +46,7 @@ with open('files/text/June.txt') as june_workouts_file:
     d = createDictionary(june_workouts_file)
 
     with open("files/json/june.json","w") as f:
-        json.dump(d,f)
+        json.dump(d,f) 
 
 #July workouts
 with open('files/text/July.txt') as july_workouts_file:
