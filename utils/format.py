@@ -1,5 +1,7 @@
 #return new formatted lines
+from utils.order import incrementOrder
 import re
+
 def formatTxtToList(lines):
     month = lines.pop(0).rstrip()
     newLines = ''
@@ -17,5 +19,5 @@ def formatTxtToList(lines):
             calories_burned =  lines[index + 2].rstrip().replace("c","")
             total_strides =  lines[index + 3].rstrip().replace("s","")
             strides_per_min = str(round(int(total_strides)/30))
-            newLines+=f'2019 {month} {day} {time_of_day} {miles_ran} {calories_burned} {total_strides} {strides_per_min} 30 \n'
+            newLines+=f'2019 {month} {day} {time_of_day} {miles_ran} {calories_burned} {total_strides} {strides_per_min} 30 {incrementOrder()} \n'
     return newLines

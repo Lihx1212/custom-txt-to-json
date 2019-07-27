@@ -1,5 +1,7 @@
 import json
 from utils.dictionary import createDictionary
+from utils.order import order
+
 #January workouts
 with open('files/text/January.txt') as jan_workouts_file:
     
